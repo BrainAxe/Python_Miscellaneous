@@ -1,0 +1,40 @@
+<Counter_Timer>:
+	orientation: 'vertical'
+	BoxLayout:
+	Label:
+		text: root.l_name
+		font_size: '30dp'
+	BoxLayout:
+		orientation: 'horizontal'
+		Label:
+			text: 'REAL MADRID PLAYS IN'
+			font_size: '46dp'
+    BoxLayout:
+		orientation: 'horizontal'
+		Label:
+			text: 'DAYS   HOURS   MINUTES   SECONDS'
+			font_size: '40dp'
+
+	BoxLayout:
+		orientation: 'horizontal'
+		Label:
+			text: root.days + "           " + root.hours + "           " + root.minutes + "                  " + root.seconds + "  "
+			font_size: '40dp'
+
+	BoxLayout:
+		Label:
+			text: "AGAINST"
+			font_size: '30dp'
+
+	BoxLayout:
+		Label:
+			text: root.op_team
+			font_size: '38dp'
+	BoxLayout:
+		Label:
+			text: "@ " + root.place
+			font_size: '30dp'
+	BoxLayout:
+		Label:
+			text: 'Powered by Tanzim Rizwan'
+			font_size: '15dp'
