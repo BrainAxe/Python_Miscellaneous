@@ -39,7 +39,7 @@ class Counter_Timer(BoxLayout):
         team1 = soup.find("div", {"class": "m_highlighted_next_game_team"}).strong.contents
         team2 = soup.find("div", {"class": "m_highlighted_next_game_team m_highlighted_next_game_second_team"}).strong.contents
         opponent = team2[0]
-        if team1[0] != 'Real Madrid':
+        if team2[0] == 'Real Madrid':
             opponent = team1[0]
 
         time = soup.find("div",{"class": "m_highlighted_next_game_info_wrapper"}).time.contents
