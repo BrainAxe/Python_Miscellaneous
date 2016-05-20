@@ -53,7 +53,7 @@ class Counter_Timer(BoxLayout):
         month = int(d[5:7])
         n_day = day
         n_hour = hour
-        if hour>24:
+        if hour>23 and day==n_day:
             n_hour = hour-24
             n_day = day+1
 
