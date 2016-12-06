@@ -45,7 +45,7 @@ class Counter_Timer(BoxLayout):
         time = soup.find("div",{"class": "m_highlighted_next_game_info_wrapper"}).time.contents
 
         time1 = time[0]
-        hour = int(time1[:2])+4
+        hour = int(time1[:2])+5
         minute = int(time1[3:5])
         d = date[0]
         day = int(d[8:10])
