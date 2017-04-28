@@ -21,3 +21,7 @@ This program collect headline from [omg ubuntu](http://www.omgubuntu.co.uk/) and
 <h3>passGenerator.py</h3>
 
 Simple password generator
+
+<h3>natWall.py</h3>
+
+Downloads picture of the day from  National Geographic website.
