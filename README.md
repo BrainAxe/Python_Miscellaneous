@@ -29,3 +29,7 @@ Downloads picture of the day from  National Geographic website.
 <h3>searcher.py</h3>
 
 Search for desire folders or files through given location.
+
+<h3>get_browser_history.py</h3>
+
+Shows browser history in list and also in a Bar chart.
