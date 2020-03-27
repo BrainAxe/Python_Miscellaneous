@@ -1,32 +1,33 @@
-#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author: Tanzim Rizwan
+# @Date:   2017-06-05 11:51:34
+# @Last Modified by:   Tanzim Rizwan
+# @Last Modified time: 2020-03-27 15:53:32
 
-__author__ = "BrainAxe"
 
 import os
-import sys 
+import sys
 import fnmatch
 
 
 def searcher():
 
-	fname = raw_input("Search For(case insensative): ").lower()
+	fname = input("Search For(case insensative): ").lower()
 	pattern = fname + '*'
 	#Enter search location here
-	location = raw_input("Location: ")  
-	
-	print "\n"
+	location = input("Location: ")
+
+	print("\n")
 
 	for root, dirs, files in os.walk(location):
-		
+
 		new_dirs = [item.lower() for item in dirs]
-		new_files = [item2.lower() for item2 in files]	
+		new_files = [item2.lower() for item2 in files]
 
 		for d in fnmatch.filter(new_dirs,pattern):
-			print d + '<dir>'
+			print(d + '<dir>')
 		for f in fnmatch.filter(new_files,pattern):
-			print f 
-
-
+			print(f)
 
 
 if __name__ == '__main__':
