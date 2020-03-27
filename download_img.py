@@ -1,10 +1,12 @@
 import os
-import urllib
 import requests
+from urllib.request import urlretrieve
 from bs4 import BeautifulSoup
 
+
+
 def get_img():
-	url = raw_input("Enter url: ")
+	url = input("Enter url: ")
 	if 'www.' in url:
 		url = url.replace('www.', "")
 	r = requests.get(url)
@@ -13,17 +15,17 @@ def get_img():
 	os.mkdir(dir_name)
 	os.chdir(dir_name)
 	images = [img for img in soup.findAll('img')]
-	print "Total " + str(len(images)) + "  images found."
+	print("Total " + str(len(images)) + "  images found.")
 	img_links = [each.get('src') for each in images]
 	for link in img_links:
-		print link
+		print(link)
 		li = link.split('/')[0]
-		if li != "http:":
-			link = "http:" + link
+		if li != "http:" or li != "https:":
+			link = url + link
 		fname = link.split('/')[-1]
-		urllib.urlretrieve(link, fname)
+		urlretrieve(link, fname)
 
-	print "Download Complete!!!"
+	print("Download Complete!!!")
 
 
 
