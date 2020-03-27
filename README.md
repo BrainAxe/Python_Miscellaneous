@@ -1,10 +1,4 @@
-#Python Projects
-
-
-
-<h3>dir_list.py</h3>
-
-This program creates a list of  the contains of a directory.
+#Python Scripts
 
 <h3>download_img.py</h3>
 
