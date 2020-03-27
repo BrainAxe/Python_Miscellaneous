@@ -33,3 +33,6 @@ Search for desire folders or files through given location.
 <h3>get_browser_history.py</h3>
 
 Shows browser history in list and also in a Bar chart.
+
+<h3>github_followers.py</h3>
+Gets the followers list of the github account 
